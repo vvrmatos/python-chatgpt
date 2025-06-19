@@ -1,9 +1,9 @@
 import openai
 
 # add/create your api key: https://platform.openai.com/account/api-keys
-openai.api_key = 'sk-************************************************'
+client = openai.OpenAI(api_key='')
 
-response = openai.ChatCompletion.create(
+response = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
             {"role": "user", "content": "Give me some Hello World C code"}
